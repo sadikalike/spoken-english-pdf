@@ -19,7 +19,7 @@ export default function DownloadPage() {
 
         {/* Download Button */}
         <a
-          href="/pdfs/spoken-english.pdf"
+          href="/pdffile/grammar.book.pdf"
           download
           className="block w-full bg-purple-600 text-white font-semibold py-3 rounded-xl hover:bg-purple-700 transition mb-3"
         >

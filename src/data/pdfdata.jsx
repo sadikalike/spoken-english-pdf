@@ -5,6 +5,6 @@ export const pdfs = [
     price: 99,
     image: "/images/pdf1.jpg",
     buyLink: "YOUR_RAZORPAY_LINK",
-    file: "/pdfs/spoken-english.pdf",
+    file: "/Pdffile/grammar.book.pdf",
   },
 ];
