@@ -69,7 +69,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-[#0a1a2f] via-[#0f2b4b] to-[#1e3c72] text-white overflow-hidden">
+    <section id="home" className="relative bg-gradient-to-br from-[#0a1a2f] via-[#0f2b4b] to-[#1e3c72] text-white overflow-hidden">
       {/* Animated Background Canvas */}
       <canvas
         ref={canvasRef}

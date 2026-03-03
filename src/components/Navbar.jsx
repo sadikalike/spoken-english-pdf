@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,13 +17,28 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Smooth scroll function
+  const handleScrollToSection = (sectionId) => {
+    if (pathname === '/') {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Go to home page with hash
+      window.location.href = `/#${sectionId}`;
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled ? "bg-[#0a1a2f] shadow-xl py-2" : "bg-[#0f2b4b] py-4"
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         
-        {/* Logo - White text */}
+        {/* Logo */}
         <Link href="/" className="group flex items-center space-x-2">
           <span className="text-3xl font-bold text-white">
             Speak Easy
@@ -31,13 +48,25 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link 
-            href="/" 
-            className="relative font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+          {/* Home Link - with scroll */}
+          <button
+            onClick={() => handleScrollToSection('home')}
+            className="relative font-medium text-white/80 hover:text-white transition-colors duration-300 group bg-transparent border-none cursor-pointer"
           >
             Home
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+          </button>
+
+          {/* About Link - with scroll */}
+          <button
+            onClick={() => handleScrollToSection('about')}
+            className="relative font-medium text-white/80 hover:text-white transition-colors duration-300 group bg-transparent border-none cursor-pointer"
+          >
+            About
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </button>
+
+          {/* PDFs Link - to PDFs page */}
           <Link 
             href="/pdfs" 
             className="relative font-medium text-white/80 hover:text-white transition-colors duration-300 group"
@@ -45,15 +74,17 @@ export default function Navbar() {
             PDFs
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link 
-            href="/contact" 
-            className="relative font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+
+          {/* Contact Link - with scroll */}
+          <button
+            onClick={() => handleScrollToSection('contact')}
+            className="relative font-medium text-white/80 hover:text-white transition-colors duration-300 group bg-transparent border-none cursor-pointer"
           >
             Contact
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+          </button>
           
-          {/* CTA Button - White with blue text */}
+          {/* Get Started Button */}
           <Link 
             href="/get-started" 
             className="px-6 py-2.5 bg-white text-[#0f2b4b] font-medium rounded-full hover:bg-gray-100 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
@@ -85,28 +116,51 @@ export default function Navbar() {
       }`}>
         <div className="bg-[#0f2b4b] shadow-xl mx-4 mt-2 rounded-2xl overflow-hidden border border-white/10">
           <div className="flex flex-col p-4">
-            <Link 
-              href="/" 
-              onClick={() => setMenuOpen(false)}
-              className="px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium"
+            {/* Mobile Home Link */}
+            <button
+              onClick={() => {
+                handleScrollToSection('home');
+                setMenuOpen(false);
+              }}
+              className="px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-left bg-transparent border-none w-full text-left cursor-pointer"
             >
               Home
-            </Link>
+            </button>
+
+            {/* Mobile About Link */}
+            <button
+              onClick={() => {
+                handleScrollToSection('about');
+                setMenuOpen(false);
+              }}
+              className="px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-left bg-transparent border-none w-full text-left cursor-pointer"
+            >
+              About
+            </button>
+
+            {/* Mobile PDFs Link */}
             <Link 
               href="/pdfs" 
               onClick={() => setMenuOpen(false)}
-              className="px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium"
+              className="px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-left"
             >
               PDFs
             </Link>
-            <Link 
-              href="/contact" 
-              onClick={() => setMenuOpen(false)}
-              className="px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium"
+
+            {/* Mobile Contact Link */}
+            <button
+              onClick={() => {
+                handleScrollToSection('contact');
+                setMenuOpen(false);
+              }}
+              className="px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-left bg-transparent border-none w-full text-left cursor-pointer"
             >
               Contact
-            </Link>
+            </button>
+
             <div className="border-t border-white/10 my-2"></div>
+
+            {/* Mobile Get Started */}
             <Link 
               href="/get-started" 
               onClick={() => setMenuOpen(false)}

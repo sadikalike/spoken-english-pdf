@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <section id="contact" className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Header with Blue Gradient */}
       <div className="relative bg-gradient-to-r from-[#0a1a2f] to-[#1e3c72] text-white overflow-hidden py-20">
         {/* Animated Background */}
@@ -13,8 +13,8 @@ export default function ContactSection() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse"></div>
         </div>
         
-        {/* Floating Particles */}
-        <div className="absolute inset-0">
+        {/* Floating Particles - commented out to avoid hydration issues */}
+        {/* <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
@@ -26,7 +26,7 @@ export default function ContactSection() {
               }}
             />
           ))}
-        </div>
+        </div> */}
         
         <div className="relative max-w-4xl mx-auto text-center px-4">
           {/* Breadcrumb */}

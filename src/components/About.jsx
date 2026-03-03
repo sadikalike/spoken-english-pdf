@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section with Blue Theme */}
-      <div className="relative bg-gradient-to-r from-[#0a1a2f] to-[#1e3c72] text-white overflow-hidden">
+      {/* Hero Section with Blue Theme - id="about" add ಮಾಡಿದೆ */}
+      <section id="about" className="relative bg-gradient-to-r from-[#0a1a2f] to-[#1e3c72] text-white overflow-hidden">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
@@ -44,10 +44,10 @@ export default function AboutPage() {
             <path d="M0 50 Q 360 0, 720 50 T 1440 50 L 1440 100 L 0 100 Z" fill="currentColor"/>
           </svg>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* Stats Section - Updated with your numbers */}
+      {/* Stats Section */}
+      <section className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
             <div className="text-3xl font-bold text-[#1e3c72] mb-2">80K+</div>
@@ -66,8 +66,10 @@ export default function AboutPage() {
             <div className="text-gray-600 text-sm">PDF Resources</div>
           </div>
         </div>
+      </section>
 
-        {/* Single Mission Section - Simplified */}
+      {/* Single Mission Section */}
+      <section className="max-w-6xl mx-auto px-4">
         <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 mb-16 border border-gray-100">
           <div className="max-w-3xl mx-auto text-center">
             <div className="w-20 h-20 bg-[#1e3c72]/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
@@ -83,8 +85,10 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+      </section>
 
-        {/* Features Grid */}
+      {/* Features Grid */}
+      <section className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-gray-100 group">
             <div className="w-14 h-14 bg-[#1e3c72]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -118,8 +122,10 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
+      </section>
 
-        {/* Learning Tip Card - Modern Version */}
+      {/* Learning Tip Card */}
+      <section className="max-w-6xl mx-auto px-4 pb-16">
         <div className="bg-gradient-to-br from-[#1e3c72] to-[#2a5298] text-white rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full filter blur-3xl"></div>
@@ -167,7 +173,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
