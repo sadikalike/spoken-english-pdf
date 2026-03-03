@@ -1,5 +1,24 @@
-// src/components/RazorpayButton.jsx
 "use client";
+
+// Bundle PDFs list (payment ಆದ್ಮೇಲೆ ಇವು download ಆಗಬೇಕು)
+const BUNDLE_PDFS = [
+  {
+    title: "Advanced Speaking Course",
+    file: "/pddfile/advanced-speaking.pdf"
+  },
+  {
+    title: "Vocabulary Builder",
+    file: "/pddfile/vocabulary.pdf"
+  },
+  {
+    title: "Daily English Conversation",
+    file: "/pddfile/conversation.pdf"
+  },
+  {
+    title: "Business English",
+    file: "/pddfile/business-english.pdf"
+  }
+];
 
 const loadRazorpayScript = () => {
   return new Promise((resolve) => {
@@ -21,13 +40,7 @@ export const handlePayment = async (pdf) => {
     const res = await loadRazorpayScript();
 
     if (!res) {
-      alert("Failed to load payment gateway. Please check your internet connection.");
-      return;
-    }
-
-    // For free PDFs, directly download
-    if (pdf.free) {
-      window.open(pdf.pdfUrl, '_blank');
+      alert("Failed to load payment gateway.");
       return;
     }
 
@@ -38,12 +51,16 @@ export const handlePayment = async (pdf) => {
       amount: pdf.price * 100,
       currency: "INR",
       name: "Spoken English Store",
-      description: pdf.title,
+      description: "English Learning Bundle (4 PDFs)",
       handler: function (response) {
         console.log("Payment success:", response);
         
-        // 🔴 IMPORTANT: ಇಲ್ಲಿ ನೇರವಾಗಿ download page ಗೆ redirect
-        // landing page ಗೆ ಹೋಗೋದಿಲ್ಲ
+        // Store bundle info in sessionStorage
+        sessionStorage.setItem('bundlePurchased', 'true');
+        sessionStorage.setItem('bundlePdfs', JSON.stringify(BUNDLE_PDFS));
+        sessionStorage.setItem('paymentId', response.razorpay_payment_id);
+        
+        // Redirect to download page with ID
         window.location.href = `/download/${pdf.id}?payment_id=${response.razorpay_payment_id}`;
       },
       prefill: {
@@ -51,25 +68,16 @@ export const handlePayment = async (pdf) => {
         email: "",
         contact: "",
       },
-      notes: {
-        pdf_id: pdf.id,
-        pdf_title: pdf.title,
-      },
       theme: {
         color: "#1e3c72",
       }
     };
 
     const paymentObject = new window.Razorpay(options);
-    
-    paymentObject.on('payment.failed', function (response) {
-      alert("Payment failed: " + response.error.description);
-    });
-
     paymentObject.open();
     
   } catch (error) {
     console.error("Razorpay Error:", error);
-    alert("Something went wrong. Please try again.");
+    alert("Something went wrong.");
   }
 };
