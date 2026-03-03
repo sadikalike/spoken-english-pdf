@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ❌ IMPORTANT: 'export' ಅನ್ನು REMOVE ಮಾಡಿ
-  // output: 'export',  // ಈ line ಇದ್ದರೆ ತೆಗೆದುಹಾಕಿ
-  
   // ✅ Dynamic routes ಗಾಗಿ 'standalone' ಬಳಸಿ
   output: 'standalone',
   
@@ -13,7 +10,7 @@ const nextConfig = {
   
   // Recommended settings
   reactStrictMode: true,
-  swcMinify: true,
+  // ❌ swcMinify: true - ಇದನ್ನು ತೆಗೆದುಹಾಕಿ (Next.js 16+ ನಲ್ಲಿ automatic)
 };
 
 module.exports = nextConfig;

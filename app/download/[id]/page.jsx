@@ -1,19 +1,6 @@
 import { Suspense } from "react";
 import DownloadContent from "./DownloadContent";
 
-// generateStaticParams for static export
-export function generateStaticParams() {
-  // If you want to pre-render specific PDF download pages
-  // Return an array of params objects
-  return [
-    { id: "1" },
-    { id: "2" },
-    // Add more IDs as needed
-  ];
-}
-import { Suspense } from "react";
-import DownloadContent from "./DownloadContent";
-
 // Dynamic route - build time ನಲ್ಲಿ prerender ಮಾಡಬೇಡಿ
 export const dynamic = 'force-dynamic';
 
@@ -23,7 +10,7 @@ export default function DownloadPage() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-[#1e3c72] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading...</p>
+          <p className="text-gray-600">Loading download page...</p>
         </div>
       </div>
     }>
