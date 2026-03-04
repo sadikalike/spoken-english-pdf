@@ -26,7 +26,7 @@ export default function AboutPage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
               About{" "}
               <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Speak Easy
+                English Guide
               </span>
             </h1>
             
