@@ -161,13 +161,13 @@ export default function Navbar() {
             <div className="border-t border-white/10 my-2"></div>
 
             {/* Mobile Get Started */}
-            <Link 
+            {/* <Link 
               href="/get-started" 
               onClick={() => setMenuOpen(false)}
               className="px-4 py-3 bg-white text-[#0f2b4b] font-medium rounded-xl text-center hover:bg-gray-100 transform hover:-translate-y-0.5 transition-all duration-300"
             >
               Get Started
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

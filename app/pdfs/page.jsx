@@ -72,7 +72,7 @@ export default function PDFsPage() {
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
               <span className="text-2xl">⭐</span>
-              <span className="text-sm">Quality</span>
+              <span className="text-sm">Expert Assured</span>
             </div>
           </div>
         </div>
@@ -105,13 +105,81 @@ export default function PDFsPage() {
           ))}
         </div>
 
-        {/* Features Section */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* ... existing features ... */}
-        </div>
-      </div>
+        {/* 🚀 FEATURES SECTION - ನೀವು ಕೇಳಿದ್ದು ಇದೇ */}
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+            Why Choose Our PDFs?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Feature 1: Expert Assured */}
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <div className="w-20 h-20 bg-[#1e3c72]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <svg className="w-10 h-10 text-[#1e3c72]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Expert Assured</h3>
+              <p className="text-gray-600 leading-relaxed">
+                ಎಲ್ಲಾ PDFಗಳನ್ನು ಪರಿಶೀಲಿಸಿದ್ದಾರೆ. ಗುಣಮಟ್ಟದ ಭರವಸೆ.
+              </p>
+            </div>
 
-      {/* ✅ Test Button REMOVED */}
+            {/* Feature 2: PDFs */}
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <div className="w-20 h-20 bg-[#1e3c72]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <svg className="w-10 h-10 text-[#1e3c72]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">4+ PDFs Bundle</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Grammar, Vocabulary, Communication ಮತ್ತು Advanced PDFಗಳ ಸಂಪೂರ್ಣ ಬಂಡಲ್ ಒಂದೇ ಕ್ಲಿಕ್‌ನಲ್ಲಿ.
+              </p>
+            </div>
+
+            {/* Feature 3: Customer Support */}
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <div className="w-20 h-20 bg-[#1e3c72]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <svg className="w-10 h-10 text-[#1e3c72]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">24/7 Customer Support</h3>
+              <p className="text-gray-600 leading-relaxed">
+                ನಿಮಗೆ ಯಾವುದೇ ಸಮಸ್ಯೆ ಇದ್ದರೂ, WhatsApp ಮೂಲಕ ನೇರವಾಗಿ ಸಂಪರ್ಕಿಸಬಹುದು.
+              </p>
+              <a 
+                href="https://wa.me/917510436350" 
+                target="_blank"
+                className="inline-flex items-center gap-2 mt-4 text-[#1e3c72] hover:text-[#2a5298] font-medium"
+              >
+                <span>Message on WhatsApp</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bonus: Trust Badges */}
+        {/* <div className="mt-16 flex flex-wrap justify-center gap-4">
+          <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full">
+            <span className="text-green-600">✓</span>
+            <span className="text-sm text-gray-600">Instant Download</span>
+          </div>
+          <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full">
+            <span className="text-green-600">✓</span>
+            <span className="text-sm text-gray-600">30-Day Refund</span>
+          </div>
+          <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full">
+            <span className="text-green-600">✓</span>
+            <span className="text-sm text-gray-600">Secure Payment</span>
+          </div>
+        </div> */}
+      </div>
 
       {/* Animation styles */}
       <style jsx>{`
