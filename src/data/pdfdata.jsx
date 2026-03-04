@@ -6,7 +6,7 @@ export const pdfs = [
   description: "Grammar, Vocabulary, Communication ಮತ್ತು Advanced PDFಗಳ ಸಂಪೂರ್ಣ ಬಂಡಲ್. ತಕ್ಷಣ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು.",
   category: "Speaking",
   free: false,
-  price: 69,
+  price: 49,
   originalPrice: 79,
   pdfUrl: "/pddfile/advanced-speaking.pdf",
   image: "/carda.jpeg" 
