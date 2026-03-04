@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="group flex items-center space-x-2">
           <span className="text-3xl font-bold text-white">
-            Speak Easy
+            English Guide
           </span>
           <span className="w-2 h-2 rounded-full bg-white group-hover:scale-150 transition-transform duration-300"></span>
         </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
           
           {/* Get Started Button */}
           <Link 
-            href="/get-started" 
+            href="/pdfs" 
             className="px-6 py-2.5 bg-white text-[#0f2b4b] font-medium rounded-full hover:bg-gray-100 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
           >
             Get Started

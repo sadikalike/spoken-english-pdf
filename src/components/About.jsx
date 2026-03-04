@@ -79,16 +79,14 @@ export default function AboutPage() {
             </div>
             <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Mission</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Our goal is to make spoken English simple for everyone.
-              Whether you are a student, job seeker or business person,
-              our PDFs are designed to help you start speaking quickly.
+     ನಾವು Instagram, Threads ಮತ್ತು Facebook ಮುಂತಾದ ಸೋಷಿಯಲ್ ಮೀಡಿಯಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳ ಮೂಲಕ ಪ್ರತಿದಿನ ಇಂಗ್ಲಿಷ್ ಮಾತನಾಡುವ ಅಭ್ಯಾಸಕ್ಕೆ ಸಹಾಯ ಮಾಡುವ ಉಪಯುಕ್ತ ಮೆಟೀರಿಯಲ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುತ್ತೇವೆ. ಆರಂಭಿಕರಿಂದ ಮುಂದುವರಿದ ಮಟ್ಟದವರೆಗೂ ಎಲ್ಲರಿಗೂ ಸುಲಭವಾಗಿ ಪ್ರಾಕ್ಟೀಸ್ ಮಾಡಲು ಅನುಕೂಲವಾಗುವಂತೆ ನಮ್ಮ ವಿಷಯವನ್ನು ತಯಾರಿಸಿದ್ದೇವೆ. ಇದಕ್ಕೆ ಜೊತೆಗೆ, ಮನೆಯಲ್ಲೇ ಸ್ವತಃ ಅಭ್ಯಾಸ ಮಾಡಲು ಸಹಾಯ ಮಾಡುವ ಸಂಪೂರ್ಣ ಪ್ರಾಕ್ಟೀಸ್ PDFಗಳೂ ನಮ್ಮಲ್ಲಿ ಇವೆ. ನಾವು ನಿಮಗೆ ಮೆಟೀರಿಯಲ್ ಕೊಡುತ್ತೇವೆ — ನಿಮ್ಮ ಪ್ರಯತ್ನದ ಮೇಲೇ ನಿಮ್ಮ ರಿಸಲ್ಟ್ ಇರುತ್ತದೆ.
             </p>
           </div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="max-w-6xl mx-auto px-4">
+      {/* <section className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-gray-100 group">
             <div className="w-14 h-14 bg-[#1e3c72]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -122,7 +120,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Learning Tip Card */}
       <section className="max-w-6xl mx-auto px-4 pb-16">

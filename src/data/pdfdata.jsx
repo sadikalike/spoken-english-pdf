@@ -1,15 +1,15 @@
 // src/data/pdfdata.jsx
 export const pdfs = [
-  {
-    id: 1,
-    title: "Advanced Speaking Course",
-    description: "Master English conversation with advanced techniques, idioms, and phrasal verbs.",
-    category: "Speaking",
-    free: false,
-    price: 69,
-    originalPrice: 79,
-    pdfUrl: "/pddfile/advanced-speaking.pdf",
-    image: null
-  }
+{
+  id: 1,
+  title: "4+ PDF Bundle",
+  description: "Grammar, Vocabulary, Communication ಮತ್ತು Advanced PDFಗಳ ಸಂಪೂರ್ಣ ಬಂಡಲ್. ತಕ್ಷಣ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು.",
+  category: "Speaking",
+  free: false,
+  price: 69,
+  originalPrice: 79,
+  pdfUrl: "/pddfile/advanced-speaking.pdf",
+  image: "/carda.jpeg" 
+}
   // ಇತರೆ PDFs ಬೇಕಾದ್ರೆ ಹಾಕಬಹುದು
 ];

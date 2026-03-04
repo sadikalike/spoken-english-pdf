@@ -93,22 +93,22 @@ export default function HeroSection() {
           </div>
 
           {/* Main Heading with Gradient */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h3 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
-              Speak English
+              Practice Spoken 
             </span>
             <br />
             <span className="relative">
-              Confidently in 30 Days
+              English the Smart Way
               <svg className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-8 text-blue-300/30" viewBox="0 0 200 20" fill="none">
                 <path d="M0 10 Q 50 0, 100 10 T 200 10" stroke="currentColor" strokeWidth="2" fill="none"/>
               </svg>
             </span>
-          </h1>
+          </h3>
 
           {/* Subheading with better readability */}
           <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Beginner-friendly Kannada to English PDFs.
+          ಸರಿಯಾದ ಅಭ್ಯಾಸದ ಮೂಲಕ ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಮಾತನಾಡುವ ಕೌಶಲ್ಯವನ್ನು ವೇಗವಾಗಿ ಬೆಳೆಸಿಕೊಳ್ಳಿ 🚀
             <span className="block md:inline"> Learn daily speaking sentences step-by-step and improve fast.</span>
           </p>
 
@@ -128,7 +128,7 @@ export default function HeroSection() {
             </Link>
 
             <Link
-              href="/contact"
+              href="#contact"
               className="group px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-2xl hover:bg-white hover:text-[#0f2b4b] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl backdrop-blur-sm"
             >
               <span className="flex items-center justify-center gap-2">
